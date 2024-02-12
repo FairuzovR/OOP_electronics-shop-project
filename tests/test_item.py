@@ -1,10 +1,12 @@
 import pytest
 from src.item import Item
+from src.phone import Phone
 from config import root_csv
 
 @pytest.fixture
 def example():
     return(Item("Смартфон", 10000, 20))
+
 
 def test_init(example):
     assert example.name == "Смартфон"
@@ -38,4 +40,3 @@ def test_repr(example):
 
 def test_str(example):
     assert str(example) == 'Смартфон'
-
